@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.column {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.box {
+    width: 400px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+.box1 {
+    height: 200px;
+    line-height: 100px;
+}
+
+.box2 {
+    height: 300px;
+    line-height: 200px;
+}
+
+.box3 {
+    height: 330px;
+    line-height: 100px;
+}
+
+.box4 {
+    height: 170px;
+    line-height: 100px;
+}
