@@ -13,19 +13,63 @@
         <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/American_International_University-Bangladesh_Monogram.svg/1200px-American_International_University-Bangladesh_Monogram.svg.png" alt="AIUB Logo" class="logo">
         <h1>AIUB</h1>
     </div>
+    
 
     <!-- Centering Boxes -->
     <div class="container">
         <div class="column">
-            <div class="box box1">Box 1</div>
-            <div class="box box2">Box 2</div>
+            <div class="box box1"></div>
+            <div class="box box2"></div>
         </div>
 
         <div class="column">
-            <div class="box box3">Box 3</div>
-            <div class="box box4">Box 4</div>
+            <div class="box box3">
+              <form id="registrationForm" class="mar">
+
+                    <h3 style="text-align: center;">Registration</h3>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name"><br>
+                    <br>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email"><br>
+                    <br>
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass" name="pass"><br>
+                    <br>
+                    <label for="cPassword">Confirm Password</label>
+                    <input type="password" id="cPassword" name="cPassword"><br>
+                    <br>
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="location"><br>
+                    <br>
+                    <label for="pCode">Postal Code</label>
+                    <input type="number" id="pCode" name="pCode"><br>
+                    <br>
+                    <label for="city">Preferred City</label>
+                    <select id="city" name="city">
+                        <option value="dha">Dhaka</option>
+                        <option value="ctg">Chattogram</option>
+                        <option value="raj">Rajshahi</option>
+                        <option value="khu">Khulna</option>
+                        <option value="syl">Sylhet</option>
+                        <option value="bar">Barishal</option>
+                        <option value="rang">Rangpur</option>
+                        <option value="mym">Mymenshing</option>
+                        
+                    </select><br><br><br>
+                    
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions</label><br>
+                    <button type="submit">Sign Up</button>
+                    <div id="messageBox" class="error" style="display:none; margin-top: 10px;"></div>
+                    
+                </form>
+                
+            </div>
+            <div class="box box4"></div>
         </div>
     </div>
+      <script src="script.js"></script>
 
 </body>
 </html>
