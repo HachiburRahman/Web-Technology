@@ -6,7 +6,7 @@
     <title>AIUB</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pbody">
 
     <!-- Logo and Title -->
     <div class="header">
@@ -18,13 +18,60 @@
     <!-- Centering Boxes -->
     <div class="container">
         <div class="column">
-            <div class="box box1"></div>
+            <div class="box box1">
+                <table class="box1 table" style="width: 100%;">
+                    <tr>
+                        <th>City Name</th>
+                        <th>AQI</th>
+                    </tr>
+                    <tr>
+                        <td>Dhaka</td>
+                        <td>117</td>
+                    </tr>
+                    <tr>
+                        <td>Barisal</td>
+                        <td>105</td>
+                    </tr>
+                    <tr>
+                        <td>Sylhet</td>
+                        <td>103</td>
+                    </tr>
+                    <tr>
+                        <td>Khulna</td>
+                        <td>104</td>
+                    </tr>
+                    <tr>
+                        <td>Chittagong</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>Rangpur</td>
+                        <td>108</td>
+                    </tr>
+                    <tr>
+                        <td>Mymenshing</td>
+                        <td>110</td>
+                    </tr>
+                    <tr>
+                        <td>Rajshahi</td>
+                        <td>112</td>
+                    </tr>
+                    <tr>
+                        <td>Gazipur</td>
+                        <td>115</td>
+                    </tr>
+                    <tr>
+                        <td>Feni</td>
+                        <td>108</td>
+                    </tr>
+                </table>
+            </div>
             <div class="box box2"></div>
         </div>
 
         <div class="column">
             <div class="box box3">
-              <form id="registrationForm" class="mar">
+              <form id="registrationForm" class="formRe" action="process.php" method="post">
 
                     <h3 style="text-align: center;">Registration</h3>
                     <label for="name">Full Name</label>
@@ -61,7 +108,7 @@
                     <input type="checkbox" id="terms" name="terms">
                     <label for="terms">I agree to the terms and conditions</label><br>
                     <button type="submit">Sign Up</button>
-                    <div id="messageBox" class="error" style="display:none; margin-top: 10px;"></div>
+                    <div id="messageBox" class="error"></div>
                     
                 </form>
                 
@@ -70,6 +117,32 @@
         </div>
     </div>
       <script src="script.js"></script>
+      <?php
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name       = htmlspecialchars($_POST["name"]);
+    $email      = htmlspecialchars($_POST["email"]);
+    $password   = htmlspecialchars($_POST["pass"]);
+    $cPassword  = htmlspecialchars($_POST["cPassword"]);
+    $location   = htmlspecialchars($_POST["location"]);
+    $postalCode = htmlspecialchars($_POST["pCode"]);
+    $city       = htmlspecialchars($_POST["city"]);
+    $terms      = isset($_POST["terms"]) ? "Agreed" : "Not Agreed";
+
+    echo "<h1>Registration Summary</h1>";
+    echo "<p><strong>Full Name:</strong> $name</p>";
+    echo "<p><strong>Email:</strong> $email</p>";
+    echo "<p><strong>Password:</strong> $password</p>";
+    echo "<p><strong>Confirm Password:</strong> $cPassword</p>";
+    echo "<p><strong>Location:</strong> $location</p>";
+    echo "<p><strong>Postal Code:</strong> $postalCode</p>";
+    echo "<p><strong>Preferred City:</strong> $city</p>";
+    echo "<p><strong>Terms and Conditions:</strong> $terms</p>";
+} else {
+    echo "<h1>No data received</h1>";
+}
+?>
+
 
 </body>
 </html>
