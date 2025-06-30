@@ -9,6 +9,8 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
+        
+
     
     }
 
@@ -30,7 +32,7 @@ body {
 }
 
 .column {
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
 }
 
@@ -41,25 +43,27 @@ body {
 }
 
 .box1 {
-    height: 550px;
+    height: 580px;
     /* line-height: 100px; */
     background-color: rgb(0, 247, 255);
 }
 
 .box2 {
-    height: 150px;
+    height: 250px;
     /* line-height: 200px; */
+    display: block;
     background-color: rgb(255, 251, 0);
 }
 
 .box3 {
-    height: 530px;
+    height: 560px;
     /* line-height: 100px; */
     background-color: rgb(170, 255, 0);
 }
 
 .box4 {
-    height: 170px;
+    height: 270px;
+    display: block;
     /* line-height: 100px; */
     background-color:rgb(216, 112, 181);
 }
@@ -70,5 +74,7 @@ table,th,td{
     display: none;
     margin-top: 10px;
 }
-
+.login{
+    margin-top: 50px;
+}
     
